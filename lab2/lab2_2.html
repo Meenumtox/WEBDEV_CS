@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <h1> แบบฟอร์มจองทัวร์</h1>
+</head>
+<body>
+<div>
+   <fieldset><legend>ข้อมูลทั่วไป</legend>
+         <form>
+        ชื่อ-สกุล:<br>
+        <input type="text" name="กรอกชื่อ-สกุล" required>* <br>
+        Email:<br>
+        <input type="email" required>* <br>
+        โทรศัพท์:<br>
+        <input type="tel"
+        value="+66" required>* <br>
+        ที่อยู่:<br>
+        <textarea required>
+
+        </textarea><br>
+        รหัสไปรษณีย์:
+        <input type="text"
+        style="width: 38px ;"
+        pattern="\d{5}"
+        required><br>
+        
+        รูปผู้จอง: 
+        <input type="file" required>
+        </form> 
+    </fieldset><br>
+
+   <fieldset><legend>ข้อมูลเข้าสู่ระบบ</legend>
+        <form>
+       Username:<br>
+       <input type="text" required pattern="\w8"><br>
+       <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ _ ตั้งแต่8 ตัวขึ้นไป</i> <br><br>
+       Password:<br>
+       <input type="password" required pattern=".{8,}"><br>
+       <i>ประกอบด้วยตัวอักขระอะไรก็ได้8 ตัวขึ้นไป</i> <br>
+       </form>
+    </fieldset><br>
+
+   <fieldset><legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+    <form>
+   <label>แพคเกจทัวร์:
+   <select name="tour">
+   <option value="Select"> --select-- </option>
+   <option value="๋Japan"> Japan </option>
+   <option value="๋Germany"> Germany </option>
+   <option value="๋South Affrica"> South Affrica </option>
+   <option value="Brazil"> Brazil </option>
+   <option value="USA"> USA </option>
+   </select>
+   </label> <br>
+   วันทึ่เดินทาง:
+   <input type="date"><br>
+   จำนวนผู้เดินทาง:
+   <input type="number" min="1" max="10" style="width: 35px;"><br>
+   <label>เน้นการท่องเที่ยวแบบใด? <br>
+    <input type="checkbox" name="tour style" value="shoping" > ช้อปปิ้ง <br>
+    <input type="checkbox" name="tour style" value="natural" > ธรรมชาติ <br>
+    <input type="checkbox" name="tour style" value="sea" > ทะเล <br>
+   </label>
+   </form></fieldset> <br>
+
+    <label>ยอมรับเงื่อนไขและข้อตกลง 
+        <input type="radio" name="agree" value="agree" checked="checked" /> I aree
+        <input type="radio" name="disagree" value="disagree"/> I disagree 
+    </label>
+    <input type="submit" value="จอง">
+
+
+</div>
+</body>
+
+
+</html>
